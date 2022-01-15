@@ -1,0 +1,45 @@
+section {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 91vh;
+  overflow: none;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .content {
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+      max-width: 35vw;
+      //   background-color: #92b4a7;
+
+      .colunas {
+        padding: 5%;
+        column-count: 2;
+        column-gap: 50px;
+        column-rule: 1px solid #414141;
+      }
+    }
+
+    .texto-icone {
+      padding-left: 16px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
