@@ -1,9 +1,4 @@
 <mat-toolbar class="header mat-elevation-z4" color="primary">
-    <!-- <span>
-        <a routerLink="/">
-            <img class="logo" src="assets\img\logo.png" alt="logo">
-        </a>
-    </span> -->
     <span class="title-group">
         <a>
             <button mat-icon-button class="example-icon" aria-label="botão para menu lateral de navegação"
@@ -12,7 +7,9 @@
                     menu
                 </i>
             </button>
-            Estudandinho
+            <div routerLink="/" class="titulo">
+                Estudandinho
+            </div>
         </a>
     </span>
 </mat-toolbar>
@@ -24,7 +21,13 @@
                 <i class="material-icons">
                     home
                 </i>
-                Início
+                Home Page
+            </a>
+            <a mat-list-item routerLink="/zap">
+                <i class="material-icons">
+                    noise_control_off
+                </i>
+                Zap
             </a>
         </mat-nav-list>
         <!-- 
