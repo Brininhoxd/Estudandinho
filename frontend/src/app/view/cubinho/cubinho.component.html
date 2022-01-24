@@ -1,0 +1,38 @@
+<div class="conteudo-centralizado-cubo">
+
+    <div class="cena">
+        <div class="content-cubo" ngClass="{'animacao-cubo': statusCubo == 7}">
+            <div class="cubo">
+                <div class="cubo-face frente">FRENTE</div>
+                <div class="cubo-face atras">ATRÁS</div>
+                <div class="cubo-face direita">DIREITA</div>
+                <div class="cubo-face esqeurda">ESQUERDA</div>
+                <div class="cubo-face cima">CIMA</div>
+                <div class="cubo-face baixo">BAIXO</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="conteudo-radio-button">
+
+        <mat-radio-group color="primary" [(ngModel)]="status">
+            <mat-radio-button *ngFor="let status of statusCubo" [value]="status.codigo" (change)="radioChange($event)">
+                {{status.descricao}}
+            </mat-radio-button>
+        </mat-radio-group>
+
+        <!-- <mat-radio-group color=primary>
+            <mat-radio-button value="1">FRENTE</mat-radio-button>
+            <mat-radio-button value="2">ATRÁS</mat-radio-button>
+            <mat-radio-button value="3">DIREITA</mat-radio-button>
+            <mat-radio-button value="4">ESQUERDA</mat-radio-button>
+            <mat-radio-button value="5">CIMA</mat-radio-button>
+            <mat-radio-button value="6">BAIXO</mat-radio-button>
+            <mat-radio-button value="7">ANIMAÇÃO</mat-radio-button>
+        </mat-radio-group> -->
+
+    </div>
+
+</div>

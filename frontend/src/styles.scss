@@ -9,10 +9,18 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.content-principal {
+.conteudo-centralizado {
   height: 91vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.msg-sucesso {
+  color: #28a745;
+}
+
+.msg-erro {
+  color: #e35e6b;
 }

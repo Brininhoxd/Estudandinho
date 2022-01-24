@@ -1,3 +1,4 @@
+import { GlobalService } from './../../../services/global.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -6,17 +7,14 @@ import { WhatsAppModalData, DialogWhatsAppComponent } from './dialog-whats-app/d
 @Component({
   selector: 'app-whats-app',
   templateUrl: './whats-app.component.html',
-  styleUrls: ['./whats-app.component.scss']
+  styleUrls: ['./whats-app.component.scss'],
 })
-export class WhatsAppComponent implements OnInit {
+export class WhatsAppComponent {
 
   constructor(
     private dialog: MatDialog,
-    private snackBar: MatSnackBar
+    private globalService: GlobalService
   ) { }
-
-  ngOnInit(): void {
-  }
 
   public openModalWhatsApp(): void {
 
@@ -34,11 +32,7 @@ export class WhatsAppComponent implements OnInit {
       if (result.celular && result.mensagem) {
         this.enviarMensagem(result.celular, result.mensagem)
       } else {
-        this.snackBar.open('Preencha os campos corretamente', 'ok', {
-          duration: 3000,
-          horizontalPosition: "center",
-          verticalPosition: 'bottom',
-        })
+        this.globalService.mostrarMensagem("Preencha os campos corretamente", true)
       }
     })
 

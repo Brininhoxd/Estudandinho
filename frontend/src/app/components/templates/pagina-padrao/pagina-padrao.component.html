@@ -1,0 +1,8 @@
+<div class="fundo-padrao">
+    <div *ngIf=" conteudoCentralizado; conteudoNaoCentralizado" class="conteudo-centralizado">
+        <ng-content select="[conteudo]"></ng-content>
+    </div>
+    <ng-template #conteudoNaoCentralizado>
+        <ng-content select=" [conteudo]"></ng-content>
+    </ng-template>
+</div>

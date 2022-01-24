@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+$background-color: #111013;
+$tamanho-cubo: 200px;
+// $cubo-gradient: linear-gradient(150deg,rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+$cubo-gradient: transparent;
+
+@keyframes cubo {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(720deg);
+  }
+}
+
+@mixin cubo {
+  // atrasface-visibility: hidden;
+  position: absolute;
+  //   width: $tamanho-cubo;
+  //   height: $tamanho-cubo;
+  background: $cubo-gradient;
+  box-shadow: inset 0 0 10px 1px rgb(209, 207, 223),
+    0 0 10px 1px rgb(209, 207, 223);
+  border: 1px solid white;
+  transition: background 1s ease;
+}
+
+.conteudo-centralizado-cubo {
+  height: 91vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #121114;
+}
+
+.cena {
+  width: 200px;
+  height: 200px;
+  margin: 80px;
+  perspective: 400px;
+
+  .content-cubo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $tamanho-cubo;
+    height: $tamanho-cubo;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% -100px;
+    transform: translate(-50%, -50%);
+
+    .cubo {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: translateZ(-100px);
+      transition: transform 1s;
+
+      .cubo-face {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        line-height: 200px;
+        font-size: 34px;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.frente {
+  @include cubo;
+  transform: rotateY(0deg) translateZ(100px);
+  background: #ff0000b3;
+}
+
+.direita {
+  @include cubo;
+  transform: rotateY(90deg) translateZ(100px);
+  background: #ffff00b3;
+}
+
+.atras {
+  @include cubo;
+  transform: rotateY(180deg) translateZ(100px);
+  background: #00ff00b3;
+}
+
+.esqeurda {
+  @include cubo;
+  transform: rotateY(-90deg) translateZ(100px);
+  background: #00ffffb3;
+}
+
+.cima {
+  @include cubo;
+  transform: rotateX(90deg) translateZ(100px);
+  background: #0000ffb3;
+}
+
+.baixo {
+  @include cubo;
+  transform: rotateX(-90deg) translateZ(100px);
+  background: #ff00ffb3;
+}
+
+.cubo.status-1 {
+  transform: translateZ(-100px) rotateY(0deg) !important;
+}
+.cubo.status-3 {
+  transform: translateZ(-100px) rotateY(-90deg) !important;
+}
+.cubo.status-2 {
+  transform: translateZ(-100px) rotateY(-180deg) !important;
+}
+.cubo.status-4 {
+  transform: translateZ(-100px) rotateY(90deg) !important;
+}
+.cubo.status-5 {
+  transform: translateZ(-100px) rotateX(-90deg) !important;
+}
+.cubo.status-6 {
+  transform: translateZ(-100px) rotateX(90deg) !important;
+}
+
+.cubo.status-7 {
+  animation: cubo 12s linear infinite;
+}
+
+.conteudo-radio-button {
+  background-color: #aba6b5;
+  border-radius: 15px;
+  padding: 15px;
+  mat-radio-button {
+    margin: 10px;
+  }
+}
+
+// .frente {
+
+// }
+// .cube__face--direita {
+
+// }
+// .cube__face--atras {
+
+// }
+// .cube__face--esqeurda {
+
+// }
+// .cube__face--cima {
+
+// }
+// .cube__face--bottom {

@@ -1,37 +1,17 @@
-section {
-  background: linear-gradient(-45deg, #24468e, #8c579c, #d8097e);
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
-  height: 91vh;
-  overflow: none;
+.card {
+  max-width: 35vw;
+  //   background-color: #92b4a7;
 
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  .colunas {
+    padding: 5%;
+    column-count: 2;
+    column-gap: 50px;
+    column-rule: 1px solid #414141;
   }
+}
 
-  .card {
-    max-width: 35vw;
-    //   background-color: #92b4a7;
-
-    .colunas {
-      padding: 5%;
-      column-count: 2;
-      column-gap: 50px;
-      column-rule: 1px solid #414141;
-    }
-  }
-
-  .texto-icone {
-    padding-left: 16px;
-    display: flex;
-    align-items: center;
-  }
+.texto-icone {
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
 }
