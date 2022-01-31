@@ -8,7 +8,6 @@ body {
 
 $background-color: #111013;
 $tamanho-cubo: 200px;
-// $cubo-gradient: linear-gradient(150deg,rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
 $cubo-gradient: transparent;
 
 @keyframes cubo {
@@ -21,10 +20,7 @@ $cubo-gradient: transparent;
 }
 
 @mixin cubo {
-  // atrasface-visibility: hidden;
   position: absolute;
-  //   width: $tamanho-cubo;
-  //   height: $tamanho-cubo;
   background: $cubo-gradient;
   box-shadow: inset 0 0 10px 1px rgb(209, 207, 223),
     0 0 10px 1px rgb(209, 207, 223);
@@ -82,37 +78,37 @@ $cubo-gradient: transparent;
 .frente {
   @include cubo;
   transform: rotateY(0deg) translateZ(100px);
-  background: #ff0000b3;
+  background: rgba(216, 151, 168, .5);
 }
 
 .direita {
   @include cubo;
   transform: rotateY(90deg) translateZ(100px);
-  background: #ffff00b3;
+  background: rgba(192, 232, 249, .5);
 }
 
 .atras {
   @include cubo;
   transform: rotateY(180deg) translateZ(100px);
-  background: #00ff00b3;
+  background: rgba(184, 211, 209, .5);
 }
 
 .esqeurda {
   @include cubo;
   transform: rotateY(-90deg) translateZ(100px);
-  background: #00ffffb3;
+  background: rgba(165, 200, 130, .5);
 }
 
 .cima {
   @include cubo;
   transform: rotateX(90deg) translateZ(100px);
-  background: #0000ffb3;
+  background: rgba(247, 221, 114, .5);
 }
 
 .baixo {
   @include cubo;
   transform: rotateX(-90deg) translateZ(100px);
-  background: #ff00ffb3;
+  background: rgba(171, 163, 204, .5);
 }
 
 .cubo.status-1 {
@@ -146,20 +142,3 @@ $cubo-gradient: transparent;
     margin: 10px;
   }
 }
-
-// .frente {
-
-// }
-// .cube__face--direita {
-
-// }
-// .cube__face--atras {
-
-// }
-// .cube__face--esqeurda {
-
-// }
-// .cube__face--cima {
-
-// }
-// .cube__face--bottom {

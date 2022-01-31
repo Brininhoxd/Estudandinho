@@ -20,7 +20,7 @@ export class CubinhoComponent {
   ]
 
   public status: number = 1
-  public classeAtual = ''
+  public classeAtual: string = ''
 
 
   public radioChange(valor: any) {
