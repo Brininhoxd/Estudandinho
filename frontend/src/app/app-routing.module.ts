@@ -1,6 +1,8 @@
-import { CubinhoComponent } from './view/cubinho/cubinho.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { CarrosselComponent } from './view/carrossel/carrossel.component';
+import { CubinhoComponent } from './view/cubinho/cubinho.component';
 import { HomeComponent } from './view/home/home.component';
 import { ZapComponent } from './view/zap/zap.component';
 
@@ -16,6 +18,10 @@ const routes: Routes = [
   {
     path: "cubinho",
     component: CubinhoComponent
+  },
+  {
+    path: "carrosel",
+    component: CarrosselComponent
   }
 ];
 

@@ -1,0 +1,19 @@
+<app-pagina-padrao [conteudoCentralizado]="true">
+    <span conteudo>
+        <mat-card class="card mat-elevation-z8">
+            <mat-card-title>Carrossel</mat-card-title>
+
+            <mat-card-content>
+                <div class="carrossel">
+                    <div class="evento animacao" *ngFor="number of [0,1,2,3,4,5,6,7,8,9]">
+                        <app-imagem-api [tamanho]="500" [temAutor]="true"></app-imagem-api>
+                    </div>
+                    <div class="cursores">
+                        <a class="anterior" (click)="mudarSlide(-1)">&#10094;</a>
+                        <a class="proximo" (click)="mudarSlide(1)">&#10095;</a>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </span>
+</app-pagina-padrao>

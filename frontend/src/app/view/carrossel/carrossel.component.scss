@@ -1,0 +1,57 @@
+.carrosel {
+  max-width: 40vw;
+  position: relative;
+  margin: auto;
+}
+
+.cursores {
+  width: 56vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.anterior,
+.proximo {
+  cursor: pointer;
+  color: #87888a;
+  background-color: #41414144;
+  border-radius: 50%;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.4s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.anterior:hover,
+.proximo:hover {
+  background-color: #313131;
+  color: white;
+}
+
+.proximo {
+  right: 0;
+}
+
+.animacao {
+  animation-name: animacao;
+  animation-duration: 1.5s;
+}
+
+@keyframes animacao {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

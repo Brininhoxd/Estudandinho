@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { EMPTY, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,17 @@ export class GlobalService {
       verticalPosition: 'top',
       panelClass: eErro ? ['msg-erro'] : ['msg-sucesso']
     })
+  }
+
+  public retornaNumeroAleatorio(min: number, max: number): number {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  public tratarErro(e: any): Observable<any> {
+    this.mostrarMensagem('Ocorreu um erro!', true)
+    return EMPTY
   }
 
 }
