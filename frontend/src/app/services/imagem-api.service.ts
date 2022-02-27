@@ -32,7 +32,6 @@ export class ImagemApiService {
 
     return this.http.get<ImagemInfos>(`${this.baseUrl}/id/${this.globalService.retornaNumeroAleatorio(0, 500)}/info`).pipe(
       map((obj) => {
-        console.log(obj);
         const autor = obj.author
         const url = `https://picsum.photos/id/${obj.id}/${tamanho}`
         const retorno: ImagemRetorno = {
