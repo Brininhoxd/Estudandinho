@@ -1,0 +1,40 @@
+<app-pagina-padrao [conteudoCentralizado]="true">
+    <span conteudo>
+        <mat-card class="card mat-elevation-z8">
+            <mat-card-title>CRUD Usuário</mat-card-title>
+            <mat-card-subtitle>Modelo de CRUD de Usuário</mat-card-subtitle>
+
+            <mat-card-content>
+                <div class="conteudo">
+
+                    <br>
+
+                    <div class="container">
+                        <app-text-box [label]="'Nome Completo'" [ngModelApp]="ngModelNome">
+                        </app-text-box>
+
+                        <app-date-picker [label]="'Data Nascimento'" [ngModelApp]="ngModelDataNascimento">
+                        </app-date-picker>
+                    </div>
+
+                    <div class="container">
+                        <app-text-box [label]="'RG'" [mascara]="'00.000.000-0'" [ngModelApp]="ngModelRg">
+                        </app-text-box>
+
+                        <app-text-box [label]="'CPF'" [mascara]="'000.000.000-00'" [ngModelApp]="ngModelCpf">
+                        </app-text-box>
+                    </div>
+
+                    <!-- TODO -->
+                    <!-- <div class="container">
+                        <app-text-box [label]="'RG'" [mascara]="'00.000.000-0'" [ngModelApp]="ngModelRg">
+                        </app-text-box>
+
+                        <app-text-box [label]="'CPF'" [mascara]="'000.000.000-00'" [ngModelApp]="ngModelCpf">
+                        </app-text-box>
+                    </div> -->
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </span>
+</app-pagina-padrao>

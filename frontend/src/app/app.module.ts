@@ -15,6 +15,10 @@ import { WhatsAppComponent } from './components/templates/whats-app/whats-app.co
 import { DialogWhatsAppComponent } from './components/templates/whats-app/dialog-whats-app/dialog-whats-app.component';
 import { PaginaPadraoComponent } from './components/templates/pagina-padrao/pagina-padrao.component';
 import { ImagemApiComponent } from './components/templates/imagem-api/imagem-api.component';
+import { CrudUsuarioComponent } from './view/crud-usuario/crud-usuario.component';
+import { ComboBoxComponent } from './components/templates/combo-box/combo-box.component';
+import { ControleCampoComponent } from './components/templates/controle-campo/controle-campo.component';
+import { DatePickerComponent } from './components/templates/date-picker/date-picker.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,10 +28,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
+import { TextBoxComponent } from './components/templates/text-box/text-box.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -41,6 +48,11 @@ import { HttpClientModule } from '@angular/common/http';
     CubinhoComponent,
     CarrosselComponent,
     ImagemApiComponent,
+    CrudUsuarioComponent,
+    ComboBoxComponent,
+    TextBoxComponent,
+    ControleCampoComponent,
+    DatePickerComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +71,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSnackBarModule,
     MatRadioModule,
     HttpClientModule,
+    MatSelectModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

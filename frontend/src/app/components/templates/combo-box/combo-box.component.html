@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+    <mat-label> {{label}} </mat-label>
+    <mat-select [(ngModel)]="ngModelApp">
+        <mat-option *ngFor="let item of ngDataSource" [value]="item.Valor">
+            {{item.Descricao}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

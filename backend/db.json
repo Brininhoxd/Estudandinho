@@ -1,0 +1,17 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Bruno de Campos Franchini",
+      "rg": "571476041",
+      "cpf": "46470030866",
+      "cep": "14804348",
+      "endereco": "Av. Moacir Fidenis, Residencial Lupo, 344",
+      "genero": "Homem Cis",
+      "orientacaoSexual": "Bisexual",
+      "pronome": "Ele/Dele",
+      "raca": "Branca",
+      "deficiencia": "Não Possui"
+    }
+  ]
+}
