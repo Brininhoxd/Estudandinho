@@ -31,4 +31,13 @@ export class GlobalService {
     return EMPTY
   }
 
+  public gerarAlfabeto(maisucula: boolean): string[] {
+    return [...Array(26)].map((_, i) => String.fromCharCode(i + (maisucula ? 65 : 97)))
+  }
+
+  public copiarTextoClipBoard(texto: string): void {
+    navigator.clipboard.writeText(texto)
+    this.mostrarMensagem("Texto copiado com sucesso!", false)
+  }
+
 }

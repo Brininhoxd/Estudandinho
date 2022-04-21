@@ -1,0 +1,20 @@
+.card {
+  width: 30vw;
+}
+
+.container {
+  width: 100%;
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  mat-slider {
+    width: 100%;
+  }
+}
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}

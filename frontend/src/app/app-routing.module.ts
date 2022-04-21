@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CarrosselComponent } from './view/carrossel/carrossel.component';
 import { CrudUsuarioComponent } from './view/crud-usuario/crud-usuario.component';
 import { CubinhoComponent } from './view/cubinho/cubinho.component';
+import { GeradorDeSenhaComponent } from './view/gerador-de-senha/gerador-de-senha.component';
 import { HomeComponent } from './view/home/home.component';
 import { ZapComponent } from './view/zap/zap.component';
 
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: "crud-usuario",
     component: CrudUsuarioComponent
+  },
+  {
+    path: "gerador-de-senha",
+    component: GeradorDeSenhaComponent
   }
 ];
 

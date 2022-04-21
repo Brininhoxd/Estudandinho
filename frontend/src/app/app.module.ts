@@ -19,6 +19,8 @@ import { CrudUsuarioComponent } from './view/crud-usuario/crud-usuario.component
 import { ComboBoxComponent } from './components/templates/combo-box/combo-box.component';
 import { ControleCampoComponent } from './components/templates/controle-campo/controle-campo.component';
 import { DatePickerComponent } from './components/templates/date-picker/date-picker.component';
+import { GeradorDeSenhaComponent } from './view/gerador-de-senha/gerador-de-senha.component';
+import { ButtonComponent } from './components/templates/button/button.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -35,6 +37,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
 import { TextBoxComponent } from './components/templates/text-box/text-box.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -53,6 +57,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     TextBoxComponent,
     ControleCampoComponent,
     DatePickerComponent,
+    GeradorDeSenhaComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +78,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatRadioModule,
     HttpClientModule,
     MatSelectModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatSliderModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

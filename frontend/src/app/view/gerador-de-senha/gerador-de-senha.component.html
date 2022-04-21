@@ -1,0 +1,61 @@
+<app-pagina-padrao [conteudoCentralizado]="true">
+    <span conteudo>
+        <mat-card class="card mat-elevation-z8">
+            <mat-card-header>
+                <mat-card-title>Gerador de Senha</mat-card-title>
+            </mat-card-header>
+            <br>
+            <mat-card-content>
+
+                <mat-form-field class="container" appearance="fill">
+                    <mat-label>Sua Senha</mat-label>
+                    <input matInput [readonly]="true" type="text" [(ngModel)]="senha">
+                    <button *ngIf="senha" matSuffix mat-icon-button (click)="copiarSenhaClipBoard()">
+                        <i class="material-icons">content_copy</i>
+                    </button>
+                </mat-form-field>
+
+                <div class="container">
+                    <mat-slider thumbLabel min="1" max="30" [(ngModel)]="tamanhoSenha">
+                    </mat-slider>
+                </div>
+
+                <div class="container">
+                    <section>
+
+                        <div class="checkbox">
+
+                            <div>
+                                <span>
+                                    <mat-checkbox [checked]="todos" [color]="task.cor"
+                                        [indeterminate]="algunsSelecionados()"
+                                        (change)="selecinarTodos($event.checked)">
+                                        {{task.nome}}
+                                    </mat-checkbox>
+                                </span>
+
+                                <span>
+                                    <ul>
+                                        <li *ngFor="let subtask of task.subtasks">
+                                            <mat-checkbox [(ngModel)]="subtask.selecionado" [color]="subtask.cor"
+                                                (ngModelChange)="todosSelecionados()">
+                                                {{subtask.nome}}
+                                            </mat-checkbox>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="button">
+                            <app-button [label]="'Gerar Senha'" (ClickBotao)="gerarSenha()"></app-button>
+                        </div>
+
+                    </section>
+                </div>
+
+            </mat-card-content>
+
+        </mat-card>
+    </span>
+</app-pagina-padrao>

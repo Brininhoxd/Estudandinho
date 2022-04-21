@@ -1,0 +1,8 @@
+<section>
+    <button mat-raised-button color="primary" [style.width]="'100%'" (click)="clickEvent()">
+        <i *ngIf="nomeIcone" class="material-icons">
+            {{nomeIcone}}
+        </i>
+        {{label}}
+    </button>
+</section>
